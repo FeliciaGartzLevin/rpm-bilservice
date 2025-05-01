@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+#root,
+#App {
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+@supports (height: 100svh) {
+	body,
+	#root,
+	#App {
+		height: 100svh;
+	}
+}
