@@ -5,16 +5,16 @@ import themeSwapper from 'tailwindcss-theme-swapper';
 const darkTheme = {
 	colors: {
 		accentColor: {
-			light: '#FFD400',
+			red: '#CD272B',
 		},
 		backgroundColor: {
-			primary: '#541388', //#2E294E
-			secondary: '#D90368',
+			primary: '#030708', //#2E294E
 		},
 		textColor: {
-			primary: '#F1E9DA',
+			primary: '#EDEFEE',
 			secondary: '#F1E9DA',
 		},
+		grey: '#CCCCCA',
 	},
 };
 

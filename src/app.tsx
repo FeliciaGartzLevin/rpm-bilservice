@@ -5,6 +5,7 @@ import { Navigation } from './pages/partials/navigation';
 import { Routes, Route } from 'react-router-dom';
 import { useThemeColors } from './hooks/use-theme-colors';
 import './index.css';
+import { Services } from './pages/services';
 
 // handle padding to the sides and max-width for content (responsively)
 
@@ -15,20 +16,21 @@ export const App = () => {
 		<div id="App" className={cssClasses}>
 			<div className="bg-primary text-textColor-primary bg-backgroundColor-primary h-full">
 				<div className="max-w-content mx-auto">
-					<div className="h-[10%] w-full px-full-app-side-spacing">
+					<header className="h-[10%] w-full px-full-app-side-spacing">
 						<Navigation />
-					</div>
+					</header>
 
-					<div className="px-full-app-side-spacing">
+					<main className="px-full-app-side-spacing">
 						<Routes>
 							<Route path="/" element={<Home />} />
-							<Route path="/about" element={<About />} />
+							<Route path="/tjänster" element={<Services />} />
+							<Route path="/om-oss" element={<About />} />
 						</Routes>
-					</div>
+					</main>
 
-					<div className="h-[20%] w-full px-full-app-side-spacing">
+					<footer className="h-[20%] w-full px-full-app-side-spacing">
 						<Footer className={'h-20 py-full-app-py'} />
-					</div>
+					</footer>
 				</div>
 			</div>
 		</div>

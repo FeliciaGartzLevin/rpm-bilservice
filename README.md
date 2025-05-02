@@ -1,8 +1,13 @@
-# PupFacts
+# RPM Bilservice
 
-A little project for refreshing some basic React knowledge
+A webpage for a local car workshop
 
-### I will
-- fetch and render data from [a free API](https://kinduff.github.io/dog-api/)
-- make a toggleble dark/light theme using Context
-- add interactions, like buttons etc.
+Built with TypeScript and React. Developed with Vite.
+
+## Start project
+
+`git clone`
+
+`npm install` in project
+
+`npm run dev` - project will run on localhost
