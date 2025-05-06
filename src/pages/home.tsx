@@ -1,3 +1,4 @@
+import { Hero } from '../components/image-services/hero';
 import { useGetRandomPupFact } from '../hooks/use-get-random-pup-fact';
 import { useThemeContext } from '../hooks/use-theme-context';
 import { ThemeType, themeValues } from '../types/theme';
@@ -14,6 +15,8 @@ export const Home = () => {
 
 	return (
 		<>
+			<Hero imageSrc="hero" />
+
 			<p>Theme: {theme}</p>
 
 			<label htmlFor="themePicker">Choose theme:</label>

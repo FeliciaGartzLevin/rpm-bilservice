@@ -14,12 +14,12 @@ export const App = () => {
 
 	return (
 		<div id="App" className={cssClasses}>
-			<div className="bg-primary text-textColor-primary bg-backgroundColor-primary h-full">
-				<div className="max-w-content mx-auto">
-					<header className="w-full px-full-app-side-spacing">
-						<Navigation />
-					</header>
+			<div className="bg-primary text-textColor-primary bg-backgroundColor-primary min-h-full">
+				<header className="w-full absolute">
+					<Navigation />
+				</header>
 
+				<div className="max-w-content mx-auto">
 					<main className="px-full-app-side-spacing">
 						<Routes>
 							<Route path="/" element={<Home />} />
@@ -27,11 +27,11 @@ export const App = () => {
 							<Route path="/om-oss" element={<About />} />
 						</Routes>
 					</main>
-
-					<footer className="h-[20%] w-full px-full-app-side-spacing">
-						<Footer className={'h-20 py-full-app-py'} />
-					</footer>
 				</div>
+
+				<footer className="h-[20%] w-full px-full-app-side-spacing">
+					<Footer className={'h-20 py-full-app-py'} />
+				</footer>
 			</div>
 		</div>
 	);

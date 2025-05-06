@@ -22,9 +22,11 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 	// TODO: use a hook or tailwind integration for checking what menu shall be shown
 
 	return (
-		<div className={clsx(className, mobileMenuOpen ? 'h-full z-10' : '')}>
+		<div
+			className={clsx(className, mobileMenuOpen ? 'h-full' : '', 'z-10')}
+		>
 			<section
-				className={`flex justify-between items-center h-[${headerHeight}]`}
+				className={`flex justify-between px-full-app-side-spacing items-center h-[${headerHeight}]`}
 			>
 				<div>
 					<NavLink to="/">
