@@ -6,19 +6,21 @@ type Props = {
 	alt: string;
 	sizes: string;
 	lazyLoading?: boolean;
+	className: string;
 };
 
 export const ImageService: React.FC<Props> = ({
 	imageSrc,
-	alt,
+	alt = 'image',
 	sizes,
 	lazyLoading,
+	className = '',
 }) => {
 	const { sm, lg, twoXl } = tailwindBreakpoints;
 	const imagePath = 'public/images/';
 
 	return (
-		<picture>
+		<picture className="object-cover h-full">
 			<source
 				type="image/webp"
 				srcSet={`
@@ -27,9 +29,19 @@ export const ImageService: React.FC<Props> = ({
 				${imagePath + imageSrc}-${twoXl}.webp ${twoXl}w
 				`}
 				sizes={sizes}
+				className={className}
+			/>
+			<source
+				type="image/jpeg"
+				srcSet={`
+					/images/${imageSrc}-640.jpg 640w,
+					/images/${imageSrc}-1024.jpg 1024w,
+					/images/${imageSrc}-1600.jpg 1600w
+				`}
+				sizes={sizes}
+				className={className}
 			/>
 			<img
-				src=""
 				srcSet={`
 				${imagePath + imageSrc}-${sm}.jpg ${sm}w,
 				${imageSrc}-${lg}.jpg ${lg}w,
@@ -38,6 +50,7 @@ export const ImageService: React.FC<Props> = ({
 				alt={alt}
 				sizes={sizes}
 				loading={lazyLoading ? 'lazy' : 'eager'}
+				className={className}
 			/>
 		</picture>
 	);

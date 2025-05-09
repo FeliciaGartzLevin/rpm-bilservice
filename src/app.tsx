@@ -6,21 +6,33 @@ import { Routes, Route } from 'react-router-dom';
 import { useThemeColors } from './hooks/use-theme-colors';
 import './index.css';
 import { Services } from './pages/services';
+import { useLocation } from 'react-router-dom';
+import clsx from 'clsx';
 
 // handle padding to the sides and max-width for content (responsively)
 
 export const App = () => {
 	const cssClasses = useThemeColors();
+	const location = useLocation();
+	const isFullWidthPage = location.pathname === '/';
 
 	return (
 		<div id="App" className={cssClasses}>
 			<div className="bg-primary text-textColor-primary bg-backgroundColor-primary min-h-full">
-				<header className="w-full absolute">
+				<header className="w-full z-20 fixed top-0">
 					<Navigation />
 				</header>
 
-				<div className="max-w-content mx-auto">
-					<main className="px-full-app-side-spacing">
+				<div
+					className={clsx(
+						isFullWidthPage ? '' : 'max-w-content mx-auto',
+					)}
+				>
+					<main
+						className={clsx(
+							isFullWidthPage ? '' : 'px-full-app-side-spacing',
+						)}
+					>
 						<Routes>
 							<Route path="/" element={<Home />} />
 							<Route path="/tjänster" element={<Services />} />

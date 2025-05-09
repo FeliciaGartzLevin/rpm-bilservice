@@ -17,27 +17,29 @@ export const Home = () => {
 		<>
 			<Hero imageSrc="hero" />
 
-			<p>Theme: {theme}</p>
+			<section className="max-w-content mx-auto px-full-app-side-spacing">
+				<p>Theme: {theme}</p>
 
-			<label htmlFor="themePicker">Choose theme:</label>
+				<label htmlFor="themePicker">Choose theme:</label>
 
-			<select
-				name="theme"
-				id="themePicker"
-				value={theme}
-				onChange={handleChange}
-			>
-				{themeValues.map((themeValue) => (
-					<option key={themeValue} value={themeValue}>
-						{themeValue.charAt(0).toUpperCase() +
-							themeValue.slice(1)}
-					</option>
-				))}
-			</select>
+				<select
+					name="theme"
+					id="themePicker"
+					value={theme}
+					onChange={handleChange}
+				>
+					{themeValues.map((themeValue) => (
+						<option key={themeValue} value={themeValue}>
+							{themeValue.charAt(0).toUpperCase() +
+								themeValue.slice(1)}
+						</option>
+					))}
+				</select>
 
-			<div className="my-5 bg-backgroundColor-secondary p-10 text-textColor-secondary flex justify-center items-center">
-				{randomPupfact ? <p>{randomPupfact}</p> : null}
-			</div>
+				<div className="my-5 bg-backgroundColor-secondary p-10 text-textColor-secondary flex justify-center items-center">
+					{randomPupfact ? <p>{randomPupfact}</p> : null}
+				</div>
+			</section>
 		</>
 	);
 };

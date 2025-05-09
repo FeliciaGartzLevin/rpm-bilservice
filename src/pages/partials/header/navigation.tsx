@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FiMenu } from 'react-icons/fi';
 import { IoClose } from 'react-icons/io5';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { clsx } from 'clsx';
 import { MobileMenuOverlay } from './mobileMenuOverlay';
 
@@ -11,6 +11,13 @@ type Props = {
 
 export const Navigation: React.FC<Props> = ({ className }) => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+
+	const location = useLocation();
+
+	// Close the mobile menu on navigation
+	useEffect(() => {
+		setMobileMenuOpen(false);
+	}, [location.pathname]);
 
 	const toggleMobileMenu = () => {
 		setMobileMenuOpen(mobileMenuOpen ? false : true);
@@ -23,7 +30,10 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 
 	return (
 		<div
-			className={clsx(className, mobileMenuOpen ? 'h-full' : '', 'z-10')}
+			className={clsx(
+				className,
+				mobileMenuOpen ? 'h-[100vh] bg-backgroundColor-primary' : '',
+			)}
 		>
 			<section
 				className={`flex justify-between px-full-app-side-spacing items-center h-[${headerHeight}]`}
