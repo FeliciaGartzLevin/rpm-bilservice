@@ -18,7 +18,7 @@ export const App = () => {
 
 	return (
 		<div id="App" className={cssClasses}>
-			<div className="bg-primary text-textColor-primary bg-backgroundColor-primary min-h-full">
+			<div className="bg-primary text-textColor-primary bg-backgroundColor-primary min-h-full font-body">
 				<header className="w-full z-20 fixed top-0">
 					<Navigation />
 				</header>

@@ -17,7 +17,7 @@ export const ImageService: React.FC<Props> = ({
 	className = '',
 }) => {
 	const { sm, lg, twoXl } = tailwindBreakpoints;
-	const imagePath = 'public/images/';
+	const imagePath = 'images/';
 
 	return (
 		<picture className="object-cover h-full">

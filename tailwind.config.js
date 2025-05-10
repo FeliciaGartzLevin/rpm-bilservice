@@ -5,7 +5,7 @@ import themeSwapper from 'tailwindcss-theme-swapper';
 const darkTheme = {
 	colors: {
 		accentColor: {
-			red: '#CD272B',
+			strong: '#CD272B',
 		},
 		backgroundColor: {
 			primary: '#030708', //#2E294E
@@ -61,6 +61,10 @@ export default {
 			},
 			maxWidth: {
 				content: '1200px',
+			},
+			fontFamily: {
+				header: ['"Racing Sans One"', 'sans-serif'],
+				body: ['"Radio Canada Big"', 'sans-serif'],
 			},
 		},
 	},
