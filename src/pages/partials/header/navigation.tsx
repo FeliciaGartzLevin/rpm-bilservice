@@ -4,15 +4,17 @@ import { IoClose } from 'react-icons/io5';
 import { NavLink, useLocation } from 'react-router-dom';
 import { clsx } from 'clsx';
 import { MobileMenuOverlay } from './mobileMenuOverlay';
+import { NavItems } from './navItems';
+import { useScreenWidth } from '../../../hooks/use-screen-width';
 
 type Props = {
 	className?: string;
 };
 
 export const Navigation: React.FC<Props> = ({ className }) => {
-	const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-
+	const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(true);
 	const location = useLocation();
+	const screenWidth = useScreenWidth();
 
 	// Close the mobile menu on navigation
 	useEffect(() => {
@@ -47,24 +49,26 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 						/>
 					</NavLink>
 				</div>
-
-				{/* Show this if tablet and up */}
-				{/* <NavItems /> */}
-
-				{/* Show this if below tablet width */}
-				<div
-					onClick={toggleMobileMenu}
-					title="menu-bar"
-					role="button"
-					className="flex items-center justify-center"
-				>
-					{mobileMenuOpen ? (
-						<IoClose size={iconSizing} />
-					) : (
-						<FiMenu size={iconSizing} />
-					)}
-				</div>
+				{screenWidth === 'xs' || screenWidth === 'sm' ? (
+					<div
+						onClick={toggleMobileMenu}
+						title="menu-bar"
+						role="button"
+						className="flex items-center justify-center"
+					>
+						{mobileMenuOpen ? (
+							<IoClose size={iconSizing} />
+						) : (
+							<FiMenu size={iconSizing} />
+						)}
+					</div>
+				) : (
+					<div className="font-header text-xl">
+						<NavItems />
+					</div>
+				)}
 			</section>
+
 			{mobileMenuOpen ? (
 				<MobileMenuOverlay headerHeight={headerHeight} />
 			) : null}

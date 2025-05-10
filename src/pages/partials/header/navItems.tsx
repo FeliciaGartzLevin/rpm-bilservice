@@ -8,10 +8,17 @@ type Props = {
 };
 
 export const NavItems: React.FC<Props> = ({ mobile }) => {
+	let linkProps = navLinks;
+
+	// filter out start page link on non mobile screens. It is reached by the logo, which is enough on such screens.
+	if (!mobile) {
+		linkProps = navLinks.filter((linkProp) => linkProp.link !== '/');
+	}
+
 	return (
 		<nav>
-			<ul className={clsx('flex gap-2', mobile ? 'flex-col' : '')}>
-				{navLinks.map((navItem) => (
+			<ul className={clsx('flex', mobile ? 'flex-col gap-3' : 'gap-6')}>
+				{linkProps.map((navItem) => (
 					<li>
 						<NavLink key={navItem.link} to={navItem.link}>
 							{navItem.label}
