@@ -1,5 +1,5 @@
 import React from 'react';
-import { tailwindBreakpoints } from '../../helpers/breakpoints';
+import { tailwindBreakpoints } from '../helpers/breakpoints';
 
 type Props = {
 	imageSrc: string;

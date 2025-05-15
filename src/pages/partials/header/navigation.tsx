@@ -38,7 +38,7 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 			)}
 		>
 			<section
-				className={`flex justify-between px-full-app-side-spacing items-center h-[${headerHeight}]`}
+				className={`flex justify-between text-page-layout items-center h-[${headerHeight}]`}
 			>
 				<div>
 					<NavLink to="/">

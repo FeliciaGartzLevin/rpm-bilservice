@@ -16,3 +16,7 @@ body,
 		height: 100svh;
 	}
 }
+
+.text-page-layout {
+	@apply max-w-content mx-auto px-full-app-side-spacing;
+}

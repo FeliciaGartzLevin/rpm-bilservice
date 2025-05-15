@@ -1,6 +1,6 @@
 import React from 'react';
-import { ImageService } from './image-services/image-service';
-import { Button } from './image-services/button';
+import { ImageService } from './image-service';
+import { Button } from './button';
 import { useNavigate } from 'react-router-dom';
 
 type Props = {
@@ -15,7 +15,7 @@ export const Hero: React.FC<Props> = ({ imageSrc }) => {
 	};
 
 	return (
-		<section className="relative h-screen">
+		<section className="relative h-screen mb-10">
 			{/* Hero image */}
 			<div className="absolute left-0 z-0">
 				<ImageService
@@ -30,7 +30,7 @@ export const Hero: React.FC<Props> = ({ imageSrc }) => {
 			<div className="absolute inset-0 bg-black/40 z-10" />
 
 			{/* Hero content */}
-			<div className="relative h-full flex flex-col items-center justify-center z-10">
+			<div className="relative h-full flex flex-col items-center justify-center z-10 text-center">
 				<h1 className="text-5xl md:text-6xl mt-80 font-header">
 					{/* text-accentColor-red */}
 					RPM Bilsevice

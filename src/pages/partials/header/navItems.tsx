@@ -19,10 +19,8 @@ export const NavItems: React.FC<Props> = ({ mobile }) => {
 		<nav>
 			<ul className={clsx('flex', mobile ? 'flex-col gap-3' : 'gap-6')}>
 				{linkProps.map((navItem) => (
-					<li>
-						<NavLink key={navItem.link} to={navItem.link}>
-							{navItem.label}
-						</NavLink>
+					<li key={navItem.link}>
+						<NavLink to={navItem.link}>{navItem.label}</NavLink>
 					</li>
 				))}
 			</ul>

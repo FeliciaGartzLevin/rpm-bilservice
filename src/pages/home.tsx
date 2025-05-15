@@ -5,7 +5,9 @@ export const Home = () => {
 		<>
 			<Hero imageSrc="hero" />
 
-			<section className="max-w-content mx-auto px-full-app-side-spacing"></section>
+			<section className="text-page-layout">
+				hello, this is dummy home page content
+			</section>
 		</>
 	);
 };

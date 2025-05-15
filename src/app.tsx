@@ -6,15 +6,11 @@ import { Routes, Route } from 'react-router-dom';
 import { useThemeColors } from './hooks/use-theme-colors';
 import './index.css';
 import { Services } from './pages/services';
-import { useLocation } from 'react-router-dom';
-import clsx from 'clsx';
 
 // handle padding to the sides and max-width for content (responsively)
 
 export const App = () => {
 	const cssClasses = useThemeColors();
-	const location = useLocation();
-	const isFullWidthPage = location.pathname === '/';
 
 	return (
 		<div id="App" className={cssClasses}>
@@ -23,25 +19,15 @@ export const App = () => {
 					<Navigation />
 				</header>
 
-				<div
-					className={clsx(
-						isFullWidthPage ? '' : 'max-w-content mx-auto',
-					)}
-				>
-					<main
-						className={clsx(
-							isFullWidthPage ? '' : 'px-full-app-side-spacing',
-						)}
-					>
-						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="/tjänster" element={<Services />} />
-							<Route path="/om-oss" element={<About />} />
-						</Routes>
-					</main>
-				</div>
+				<main>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/tjänster" element={<Services />} />
+						<Route path="/om-oss" element={<About />} />
+					</Routes>
+				</main>
 
-				<footer className="h-[20%] w-full px-full-app-side-spacing">
+				<footer className="h-[20%] w-full mt-10">
 					<Footer className={'h-20 py-full-app-py'} />
 				</footer>
 			</div>
