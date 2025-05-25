@@ -27,8 +27,8 @@ export const App = () => {
 					</Routes>
 				</main>
 
-				<footer className="h-[20%] w-full mt-10">
-					<Footer className={'h-20 py-full-app-py'} />
+				<footer className="w-full mt-10">
+					<Footer />
 				</footer>
 			</div>
 		</div>

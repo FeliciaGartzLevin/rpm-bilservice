@@ -20,3 +20,11 @@ body,
 .text-page-layout {
 	@apply max-w-content mx-auto px-full-app-side-spacing;
 }
+
+footer a {
+	@apply underline underline-offset-2;
+}
+
+footer a:hover {
+	@apply text-accentColor-strong underline-offset-4;
+}
