@@ -9,11 +9,7 @@ const Logo: FC<Props> = ({ classes }) => {
 	return (
 		<div>
 			<NavLink to="/">
-				<img
-					alt="logo"
-					src="../../../favicon.ico"
-					className={classes}
-				/>
+				<img alt="logo" src="/images/logo.jpg" className={classes} />
 			</NavLink>
 		</div>
 	);

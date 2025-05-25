@@ -19,6 +19,10 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 
 	// Close the mobile menu on navigation
 	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		});
 		setMobileMenuOpen(false);
 	}, [location.pathname]);
 
