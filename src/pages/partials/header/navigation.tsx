@@ -21,6 +21,12 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 		setMobileMenuOpen(false);
 	}, [location.pathname]);
 
+	useEffect(() => {
+		if (!(screenWidth === 'xs' || screenWidth === 'sm')) {
+			setMobileMenuOpen(false);
+		}
+	}, [screenWidth]);
+
 	const toggleMobileMenu = () => {
 		setMobileMenuOpen(mobileMenuOpen ? false : true);
 	};
