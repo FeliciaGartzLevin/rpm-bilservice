@@ -6,9 +6,10 @@ import { Heading } from './heading';
 
 type Props = {
 	imageSrc: string;
+	imageAlt: string;
 };
 
-export const Hero: React.FC<Props> = ({ imageSrc }) => {
+export const Hero: React.FC<Props> = ({ imageSrc, imageAlt }) => {
 	const navigate = useNavigate();
 
 	const onClickCta = () => {
@@ -21,7 +22,7 @@ export const Hero: React.FC<Props> = ({ imageSrc }) => {
 			<div className="absolute left-0 z-0">
 				<ImageService
 					imageSrc={imageSrc}
-					alt="Manlig bilmekaniker med svart T-shirt och svarta handskar jobbar framför en öppen motorhuv på en bil"
+					alt={imageAlt}
 					className="h-screen w-screen object-cover"
 					sizes="100vw"
 				/>
