@@ -10,15 +10,17 @@ export const Home = () => {
 				imageSrc="hero"
 			/>
 
-			<section className="text-page-layout my-16 md:my-36">
+			<section className="text-page-layout text-body-section-layout">
 				<Heading tag="h2">Service</Heading>
-				Car ipsum dolor sit amet fuel tank spoiler. Blinker street
-				petrol gasoline station wagon kammback two-door rearview mirror.
-				Expressway cross-over compact moped minivan navigation
-				gas-electric. Speedometer gear garage fuel gauge spider
-				horsepower hard top steering wheel. Wheelbase dashboard taxi cab
-				cross-over trunk differential. Auto street station wagon
-				cabriolet boot.
+				<p>
+					Car ipsum dolor sit amet fuel tank spoiler. Blinker street
+					petrol gasoline station wagon kammback two-door rearview
+					mirror. Expressway cross-over compact moped minivan
+					navigation gas-electric. Speedometer gear garage fuel gauge
+					spider horsepower hard top steering wheel. Wheelbase
+					dashboard taxi cab cross-over trunk differential. Auto
+					street station wagon cabriolet boot.
+				</p>
 			</section>
 
 			<section>
@@ -30,15 +32,17 @@ export const Home = () => {
 				/>
 			</section>
 
-			<section className="text-page-layout my-16 md:my-36">
+			<section className="text-page-layout text-body-section-layout">
 				<Heading tag="h2">Kammback</Heading>
-				Car ipsum dolor sit amet fuel tank spoiler. Blinker street
-				petrol gasoline station wagon kammback two-door rearview mirror.
-				Expressway cross-over compact moped minivan navigation
-				gas-electric. Speedometer gear garage fuel gauge spider
-				horsepower hard top steering wheel. Wheelbase dashboard taxi cab
-				cross-over trunk differential. Auto street station wagon
-				cabriolet boot.
+				<p>
+					Car ipsum dolor sit amet fuel tank spoiler. Blinker street
+					petrol gasoline station wagon kammback two-door rearview
+					mirror. Expressway cross-over compact moped minivan
+					navigation gas-electric. Speedometer gear garage fuel gauge
+					spider horsepower hard top steering wheel. Wheelbase
+					dashboard taxi cab cross-over trunk differential. Auto
+					street station wagon cabriolet boot.
+				</p>
 			</section>
 		</>
 	);

@@ -17,14 +17,24 @@ body,
 	}
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .text-page-layout {
 	@apply max-w-content mx-auto px-full-app-side-spacing;
 }
 
-footer a {
+.text-body-section-layout {
+	@apply my-16 md:my-36;
+}
+
+footer a,
+main a {
 	@apply underline underline-offset-2;
 }
 
-footer a:hover {
-	@apply text-accentColor-strong underline-offset-4;
+footer a:hover,
+main a:hover {
+	@apply text-accentColor-strong underline-offset-4 cursor-pointer;
 }

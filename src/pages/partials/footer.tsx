@@ -8,6 +8,7 @@ type Props = {
 export const Footer: React.FC<Props> = ({ className }) => {
 	return (
 		<div
+			id="footer"
 			className={
 				className +
 				' bg-primary flex flex-col justify-center items-center'
