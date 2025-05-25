@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { FiMenu } from 'react-icons/fi';
 import { IoClose } from 'react-icons/io5';
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { clsx } from 'clsx';
 import { MobileMenuOverlay } from './mobileMenuOverlay';
 import { NavItems } from './navItems';
 import { useScreenWidth } from '../../../hooks/use-screen-width';
+import Logo from '../../../components/logo';
 
 type Props = {
 	className?: string;
@@ -44,17 +45,9 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 			)}
 		>
 			<section
-				className={`flex justify-between text-page-layout items-center h-[${headerHeight}]`}
+				className={`flex justify-between text-page-layout font-header text-3xl md:text-xl items-center h-[${headerHeight}]`}
 			>
-				<div>
-					<NavLink to="/">
-						<img
-							alt="logo"
-							src="../../../favicon.ico"
-							className="h-[3rem]"
-						/>
-					</NavLink>
-				</div>
+				<Logo classes="h-[3rem]" />
 				{screenWidth === 'xs' || screenWidth === 'sm' ? (
 					<div
 						onClick={toggleMobileMenu}
@@ -69,7 +62,7 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 						)}
 					</div>
 				) : (
-					<div className="font-header text-xl">
+					<div>
 						<NavItems />
 					</div>
 				)}
