@@ -2,6 +2,7 @@ import React from 'react';
 import { ImageService } from './image-service';
 import { Button } from './button';
 import { useNavigate } from 'react-router-dom';
+import { Heading } from './heading';
 
 type Props = {
 	imageSrc: string;
@@ -27,17 +28,16 @@ export const Hero: React.FC<Props> = ({ imageSrc }) => {
 			</div>
 
 			{/* Overlay for better contrast */}
-			<div className="absolute inset-0 bg-black/40 z-10" />
+			<div className="absolute inset-0 bg-black/25 z-10" />
 
 			{/* Hero content */}
 			<div className="relative h-full flex flex-col items-center justify-center z-10 text-center">
-				<h1 className="text-5xl md:text-6xl mt-80 font-header">
-					{/* text-accentColor-red */}
+				<Heading tag="h1" classes="mt-80 mb-1 md:mb-2">
 					RPM Bilsevice
-				</h1>
-				<p className="mt-4 text-lg md:text-xl">
-					- din bilmekaniker i Malmö
-				</p>
+				</Heading>
+
+				<p className="text-lg md:text-xl">- din bilmekaniker i Malmö</p>
+
 				<Button
 					purpose="accent"
 					text="Våra tjänster"
