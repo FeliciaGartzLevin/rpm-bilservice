@@ -32,7 +32,7 @@ export const Hero: React.FC<Props> = ({ imageSrc, imageAlt }) => {
 			<div className="absolute inset-0 bg-black/25 z-10" />
 
 			{/* Hero content */}
-			<div className="relative h-full flex flex-col items-center justify-center z-10 text-center">
+			<div className="relative h-full flex flex-col items-center justify-center z-10 text-center text-hero">
 				<Heading tag="h1" classes="mt-80 mb-1 md:mb-2">
 					RPM Bilsevice
 				</Heading>

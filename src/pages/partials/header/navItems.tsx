@@ -17,10 +17,15 @@ export const NavItems: React.FC<Props> = ({ mobile }) => {
 
 	return (
 		<nav>
-			<ul className={clsx('flex', mobile ? 'flex-col gap-5' : 'gap-6')}>
+			<ul className={clsx('flex', mobile ? 'flex-col gap-5' : 'gap-8')}>
 				{linkProps.map((navItem) => (
 					<li key={navItem.link}>
-						<NavLink to={navItem.link}>{navItem.label}</NavLink>
+						<NavLink
+							to={navItem.link}
+							className="hover:text-accentColor-strong"
+						>
+							{navItem.label}
+						</NavLink>
 					</li>
 				))}
 			</ul>

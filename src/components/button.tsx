@@ -11,9 +11,9 @@ export const Button: React.FC<Props> = ({ purpose, onClick, text }) => {
 	return (
 		<button
 			className={clsx(
-				'mt-6 px-7 py-3 rounded-xl font-header text-2xl',
+				'mt-6 px-7 py-3 rounded-xl font-header text-2xl hover-animation-effect',
 				purpose === 'accent'
-					? 'bg-accentColor-strong'
+					? 'bg-button-red hover:bg-button-red-hover text-hero'
 					: 'bg-accentColor-light',
 			)}
 			onClick={onClick}

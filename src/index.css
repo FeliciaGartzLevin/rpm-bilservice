@@ -29,6 +29,11 @@ html {
 	@apply my-16 md:my-36;
 }
 
+a,
+.hover-animation-effect {
+	@apply transition delay-75 duration-200 ease-in-out;
+}
+
 footer a,
 main a {
 	@apply underline underline-offset-2;

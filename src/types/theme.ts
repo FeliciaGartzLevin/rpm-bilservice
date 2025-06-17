@@ -1,3 +1,3 @@
-export const themeValues = ['light', 'dark', 'pink'] as const;
+export const themeValues = ['light', 'dark'] as const;
 
 export type ThemeType = (typeof themeValues)[number];

@@ -1,35 +1,26 @@
 import React from 'react';
-import { ThemeType, themeValues } from '../types/theme';
+import { ThemeType } from '../types/theme';
 import { useThemeContext } from '../hooks/use-theme-context';
+import { IoCarSportSharp } from 'react-icons/io5';
 
 export const ThemePicker: React.FC = () => {
 	const themeContext = useThemeContext();
 	const { theme, changeTheme } = themeContext;
 
-	const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-		changeTheme(event.target.value as ThemeType);
+	const handleChange = () => {
+		changeTheme((theme === 'light' ? 'dark' : 'light') as ThemeType);
 	};
 
 	return (
 		<>
-			<p>Theme: {theme}</p>
-
-			<label htmlFor="themePicker">Choose theme:</label>
-
-			<select
-				name="theme"
-				id="themePicker"
-				value={theme}
-				onChange={handleChange}
-				className="bg-backgroundColor-primary text-primary"
+			<button
+				type="button"
+				title="Theme picker"
+				onClick={handleChange}
+				className="rounded bg-backgroundColor-primary hover:cursor-pointer hover:text-accentColor-strong hover-animation-effect text-textColor-primary px-2"
 			>
-				{themeValues.map((themeValue) => (
-					<option key={themeValue} value={themeValue}>
-						{themeValue.charAt(0).toUpperCase() +
-							themeValue.slice(1)}
-					</option>
-				))}
-			</select>
+				<IoCarSportSharp size={32} />
+			</button>
 		</>
 	);
 };

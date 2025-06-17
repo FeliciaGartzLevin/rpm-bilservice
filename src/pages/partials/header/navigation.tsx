@@ -7,6 +7,7 @@ import { MobileMenuOverlay } from './mobileMenuOverlay';
 import { NavItems } from './navItems';
 import { useScreenWidth } from '../../../hooks/use-screen-width';
 import Logo from '../../../components/logo';
+import { ThemePicker } from '../../../components/themePicker';
 
 type Props = {
 	className?: string;
@@ -39,13 +40,13 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 	const iconSizing = '2.5rem';
 	const headerHeight = '4rem';
 
-	// TODO: use a hook or tailwind integration for checking what menu shall be shown
-
 	return (
 		<div
 			className={clsx(
 				className,
-				mobileMenuOpen ? 'h-[100vh] bg-backgroundColor-primary' : '',
+				mobileMenuOpen
+					? 'h-[100vh] bg-backgroundColor-primary text-textColor-primary'
+					: '',
 			)}
 		>
 			<section
@@ -57,17 +58,21 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 						onClick={toggleMobileMenu}
 						title="menu-bar"
 						role="button"
-						className="flex items-center justify-center"
+						className="flex items-center justify-center gap-10"
 					>
 						{mobileMenuOpen ? (
-							<IoClose size={iconSizing} />
+							<>
+								<ThemePicker />
+								<IoClose size={iconSizing} />
+							</>
 						) : (
 							<FiMenu size={iconSizing} />
 						)}
 					</div>
 				) : (
-					<div>
+					<div className="flex gap-10">
 						<NavItems />
+						<ThemePicker />
 					</div>
 				)}
 			</section>
