@@ -19,7 +19,7 @@ export const Footer: React.FC<Props> = ({ className }) => {
 			<Logo classes="h-[4rem] md:h-[5rem] my-12 md:my-16" />
 
 			<section className="text-page-layout flex flex-col md:flex-row justify-center items-start gap-10 md:gap-64 mb-10 md:mb-32">
-				<section className="flex flex-col gap-1">
+				<section id="Kontakt" className="flex flex-col gap-1">
 					<Heading tag="h3">Kontakt</Heading>
 					<p>RPM Bilservice</p>
 					<p>

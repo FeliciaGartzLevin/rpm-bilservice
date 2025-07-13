@@ -78,7 +78,10 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 			</section>
 
 			{mobileMenuOpen ? (
-				<MobileMenuOverlay headerHeight={headerHeight} />
+				<MobileMenuOverlay
+					headerHeight={headerHeight}
+					closeMobileMenu={() => setMobileMenuOpen(false)}
+				/>
 			) : null}
 		</div>
 	);
