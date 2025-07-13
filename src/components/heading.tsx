@@ -1,8 +1,9 @@
 import clsx from 'clsx';
 import { FC, ReactNode } from 'react';
+import { HeadingTag } from '../types/heading-tag';
 
 type Props = {
-	tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+	tag: HeadingTag;
 	children: ReactNode;
 	classes?: string;
 };
