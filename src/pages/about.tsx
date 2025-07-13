@@ -9,28 +9,27 @@ export const About: React.FC = () => {
 				alt="En manlig bilmekaniker med grå tröja står med ryggen mot kameran och mekar under en bil som är upphissad i en röd billift."
 			/>
 			<section className="text-page-layout">
-				<Heading tag="h2">Hej!</Heading>
-				Det är jag som äger RPM bilservice. Jag är syrisk medborgare och
-				kom till Sverige för ungefär tio år sedan. Jag arbetade i mitt
-				hemland inom bilbranschen i flera år. När kriget bröt ut
-				bestämde jag mig för att flytta till det här landet. Först
-				tänkte jag på att studera, och sedan på mitt yrke. Jag började
-				på en svensk skola och lärde mig språket, för språket är nyckeln
-				🔑 till landet och den rätta vägen för att nå sina mål. Jag gick
-				in i bilreparationsbranschen. Först började jag på Lernia och
-				tog ett certifikat i lastbilsreparation. Jag arbetade på
-				Mercedes i Malmö. Efter en kort tid bestämde jag mig för att gå
-				över till personbilar. Jag började på skolan Eriksakademin i
-				Arlöv, studerade i nästan två år och tog ett
-				mekanikercertifikat. Sedan arbetade jag en period på VolksWagen,
-				och efter det jobbade jag på flera olika ställen. Många
-				människor följde med mig till de platser där jag arbetade. Efter
-				det bestämde jag mig för att starta mitt eget företag, kämpa och
-				uppfylla min dröm. Nu har jag mitt lilla projekt i utkanten av
-				Malmö – en bilverkstad för alla typer av bilar 🚗 både gamla och
-				nya. Jag älskar utveckling och nya saker. Jag gillar att
-				upptäcka saker som är svåra att laga, och jag älskar att hjälpa
-				människor så mycket jag kan.
+				<Heading tag="h2">
+					Professionell bilservice med rötter i branschen
+				</Heading>
+				Välkommen till RPM Bilservice – en engagerad och kunnig
+				bilverkstad i utkanten av Malmö. Här möts du av en passion för
+				bilar, kvalitet i varje detalj och ett tydligt mål: att erbjuda
+				pålitlig bilservice och bilreparationer för alla typer av
+				fordon, både nya och äldre modeller. Intresset för fordon
+				började tidigt och utvecklades snabbt till ett yrke. Med rätt
+				utbildning och erfarenhet från flera välrenommerade verkstäder –
+				bland annat inom både lastbilar och personbilar – växte
+				kunskapen och kompetensen inom allt från enklare servicearbeten
+				till mer avancerad felsökning och motorreparationer. Efter många
+				år i branschen föddes drömmen om att driva något eget – en
+				bilverkstad där kunden alltid står i centrum och där inget
+				uppdrag är för litet eller för svårt. Idag är RPM Bilservice
+				resultatet av den visionen: en modern, flexibel och
+				lösningsorienterad verkstad där varje bil får den omsorg den
+				förtjänar. Här brinner vi för problemlösning, för att hitta
+				orsaken bakom svåra fel – och framför allt för att hjälpa
+				människor på vägen.
 			</section>
 		</>
 	);

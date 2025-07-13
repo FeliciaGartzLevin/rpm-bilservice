@@ -11,15 +11,18 @@ export const Home = () => {
 			/>
 
 			<section className="text-page-layout text-body-section-layout">
-				<Heading tag="h2">Service</Heading>
+				<Heading tag="h2">
+					Service och bilreparation i toppklass
+				</Heading>
 				<p>
-					Car ipsum dolor sit amet fuel tank spoiler. Blinker street
-					petrol gasoline station wagon kammback two-door rearview
-					mirror. Expressway cross-over compact moped minivan
-					navigation gas-electric. Speedometer gear garage fuel gauge
-					spider horsepower hard top steering wheel. Wheelbase
-					dashboard taxi cab cross-over trunk differential. Auto
-					street station wagon cabriolet boot.
+					Välkommen till RPM Bilservice – din pålitliga bilverkstad i
+					Malmö. Vi erbjuder professionell bilservice och underhåll
+					för alla bilmärken och modeller. Våra certifierade
+					bilmekaniker arbetar noggrant med allt från oljebyten,
+					filterbyten, kontroll av bromsar, fjädring och mer. Vi
+					följer tillverkarens rekommendationer för att säkerställa
+					att din bil behåller både prestanda och säkerhet. Boka din
+					bilservice hos oss redan idag!
 				</p>
 			</section>
 
@@ -33,15 +36,17 @@ export const Home = () => {
 			</section>
 
 			<section className="text-page-layout text-body-section-layout">
-				<Heading tag="h2">Kammback</Heading>
+				<Heading tag="h2">
+					Din kompletta bilverkstad – vi löser det mesta
+				</Heading>
 				<p>
-					Car ipsum dolor sit amet fuel tank spoiler. Blinker street
-					petrol gasoline station wagon kammback two-door rearview
-					mirror. Expressway cross-over compact moped minivan
-					navigation gas-electric. Speedometer gear garage fuel gauge
-					spider horsepower hard top steering wheel. Wheelbase
-					dashboard taxi cab cross-over trunk differential. Auto
-					street station wagon cabriolet boot.
+					RPM Bilservice är mer än bara en vanlig verkstad – vi
+					erbjuder heltäckande bilreparationer och felsökning med
+					modern utrustning. Oavsett om det gäller kamremsbyte,
+					kopplingsbyte, avgassystem, fjädring eller byte av motor,
+					har vi kunskapen och erfarenheten att utföra arbetet
+					effektivt och korrekt. Hos oss får du snabb hjälp, tydliga
+					kostnadsförslag och ett arbete du kan lita på.
 				</p>
 			</section>
 		</>
