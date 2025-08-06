@@ -4,8 +4,7 @@ import { navLinks } from './header/navLinks';
 
 export const PageTitle: React.FC = () => {
 	const location = useLocation();
-	console.log('navlinks', navLinks);
-	console.log('location', location);
+
 	const foundLink = navLinks.find(
 		(navlink) => navlink.link === decodeURIComponent(location.pathname),
 	);
