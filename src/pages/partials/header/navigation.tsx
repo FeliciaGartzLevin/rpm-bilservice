@@ -49,33 +49,35 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 					: '',
 			)}
 		>
-			<section
-				className={`flex justify-between text-page-layout font-header text-3xl md:text-xl items-center h-[${headerHeight}]`}
-			>
-				<Logo classes="h-[3rem]" />
-				{screenWidth === 'xs' || screenWidth === 'sm' ? (
-					<div
-						onClick={toggleMobileMenu}
-						title="menu-bar"
-						role="button"
-						className="flex items-center justify-center gap-10"
-					>
-						{mobileMenuOpen ? (
-							<>
-								<ThemePicker />
-								<IoClose size={iconSizing} />
-							</>
-						) : (
-							<FiMenu size={iconSizing} />
-						)}
-					</div>
-				) : (
-					<div className="flex gap-10">
-						<NavItems />
-						<ThemePicker />
-					</div>
-				)}
-			</section>
+			<div className="backdrop-filter backdrop-blur-lg bg-opacity-30 bg-primary fade-bottom">
+				<section
+					className={`flex justify-between text-page-layout font-header text-3xl md:text-xl items-center h-[${headerHeight}] text-textColor-primary`}
+				>
+					<Logo classes="h-[3rem]" />
+					{screenWidth === 'xs' || screenWidth === 'sm' ? (
+						<div
+							onClick={toggleMobileMenu}
+							title="menu-bar"
+							role="button"
+							className="flex items-center justify-center gap-10"
+						>
+							{mobileMenuOpen ? (
+								<>
+									<ThemePicker />
+									<IoClose size={iconSizing} />
+								</>
+							) : (
+								<FiMenu size={iconSizing} />
+							)}
+						</div>
+					) : (
+						<div className="flex gap-10">
+							<NavItems />
+							<ThemePicker />
+						</div>
+					)}
+				</section>
+			</div>
 
 			{mobileMenuOpen ? (
 				<MobileMenuOverlay

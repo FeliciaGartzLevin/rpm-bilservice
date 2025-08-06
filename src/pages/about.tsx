@@ -8,7 +8,7 @@ export const About: React.FC = () => {
 				imageSrc="mechanic"
 				alt="En manlig bilmekaniker med grå tröja står med ryggen mot kameran och mekar under en bil som är upphissad i en röd billift."
 			/>
-			<section className="text-page-layout">
+			<section className="text-page-layout mb-5">
 				<Heading tag="h2">
 					Professionell bilservice med rötter i branschen
 				</Heading>
@@ -21,11 +21,14 @@ export const About: React.FC = () => {
 				utbildning och erfarenhet från flera välrenommerade verkstäder –
 				bland annat inom både lastbilar och personbilar – växte
 				kunskapen och kompetensen inom allt från enklare servicearbeten
-				till mer avancerad felsökning och motorreparationer. Efter många
-				år i branschen föddes drömmen om att driva något eget – en
-				bilverkstad där kunden alltid står i centrum och där inget
-				uppdrag är för litet eller för svårt. Idag är RPM Bilservice
-				resultatet av den visionen: en modern, flexibel och
+				till mer avancerad felsökning och motorreparationer.
+			</section>
+
+			<section className="text-page-layout mb-20">
+				Efter många år i branschen föddes drömmen om att driva något
+				eget – en bilverkstad där kunden alltid står i centrum och där
+				inget uppdrag är för litet eller för svårt. Idag är RPM
+				Bilservice resultatet av den visionen: en modern, flexibel och
 				lösningsorienterad verkstad där varje bil får den omsorg den
 				förtjänar. Här brinner vi för problemlösning, för att hitta
 				orsaken bakom svåra fel – och framför allt för att hjälpa

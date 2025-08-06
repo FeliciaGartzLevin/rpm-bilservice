@@ -43,3 +43,8 @@ footer a:hover,
 main a:hover {
 	@apply text-accentColor-strong underline-offset-4 cursor-pointer;
 }
+
+.fade-bottom {
+	-webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+	mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
