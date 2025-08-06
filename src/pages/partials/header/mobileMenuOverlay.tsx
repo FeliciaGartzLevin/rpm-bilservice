@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { NavItems } from './navItems';
 import { useScreenWidth } from '../../../hooks/use-screen-width';
 
