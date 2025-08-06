@@ -37,7 +37,7 @@ export const Footer: React.FC<Props> = ({ className }) => {
 
 				<section className="flex flex-col gap-1">
 					<Heading tag="h3">Adress</Heading>
-					<p>Tärnogatan 5</p>
+					<p>Tärnögatan 5</p>
 					<p>211 24 Malmö</p>
 					<p>
 						<a
