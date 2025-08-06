@@ -8,7 +8,6 @@ export const useThemeColors = () => {
 	const cssClasses = clsx({
 		base: theme === 'dark',
 		light: theme === 'light',
-		pink: theme === 'pink',
 	});
 
 	return cssClasses;
