@@ -8,7 +8,7 @@ import { NavItems } from './navItems';
 import { useScreenWidth } from '../../../hooks/use-screen-width';
 import Logo from '../../../components/logo';
 import { ThemePicker } from '../../../components/themePicker';
-import { useHeroVisibility } from '../../../hooks/use-is-hero-visible';
+import { useIsScrolled } from '../../../hooks/use-is-scrolled';
 
 type Props = {
 	className?: string;
@@ -18,8 +18,12 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 	const location = useLocation();
 	const screenWidth = useScreenWidth();
-	const isHeroVisible = useHeroVisibility();
-
+	const isScrolled = useIsScrolled();
+	const isStartPage = '/' === decodeURIComponent(location.pathname);
+	console.log({
+		isScrolled,
+		isStartPage,
+	});
 	// Close the mobile menu on navigation
 	useEffect(() => {
 		window.scrollTo({
@@ -46,17 +50,23 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 		<div
 			className={clsx(
 				className,
-				isHeroVisible && !mobileMenuOpen
+				isStartPage && !mobileMenuOpen && !isScrolled
 					? 'text-white'
 					: 'text-textColor-primary',
+				!(screenWidth === 'xs' || screenWidth === 'sm')
+					? 'transition-colors duration-300'
+					: '',
 				mobileMenuOpen ? 'h-[100vh] bg-backgroundColor-primary' : '',
 			)}
 		>
 			<div
-				className={`absolute top-0 left-0 backdrop-filter backdrop-blur-lg bg-primary fade-bottom h-[${headerHeight}] w-full z-0`}
+				className={clsx(
+					`absolute top-0 left-0 h-[${headerHeight}] w-full z-0 transition-opacity duration-300 bg-backgroundColor-primary`,
+					isScrolled ? 'opacity-100' : 'opacity-0',
+				)}
 			></div>
 			<section
-				className={`relative flex justify-between text-page-layout font-header text-3xl md:text-xl items-center h-[${headerHeight}] bg-transparent z-20`}
+				className={`relative flex justify-between text-page-layout font-header text-3xl md:text-xl items-center h-[${headerHeight}] z-10 bg-transparent`}
 			>
 				<Logo classes="h-[3rem] !opacity-100" />
 				{screenWidth === 'xs' || screenWidth === 'sm' ? (
