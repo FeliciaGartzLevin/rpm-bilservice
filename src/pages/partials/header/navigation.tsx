@@ -15,7 +15,7 @@ type Props = {
 };
 
 export const Navigation: React.FC<Props> = ({ className }) => {
-	const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(true);
+	const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 	const location = useLocation();
 	const screenWidth = useScreenWidth();
 	const isHeroVisible = useHeroVisibility();
