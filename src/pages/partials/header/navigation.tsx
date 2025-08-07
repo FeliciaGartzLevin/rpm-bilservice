@@ -20,10 +20,7 @@ export const Navigation: React.FC<Props> = ({ className }) => {
 	const screenWidth = useScreenWidth();
 	const isScrolled = useIsScrolled();
 	const isStartPage = '/' === decodeURIComponent(location.pathname);
-	console.log({
-		isScrolled,
-		isStartPage,
-	});
+
 	// Close the mobile menu on navigation
 	useEffect(() => {
 		window.scrollTo({
