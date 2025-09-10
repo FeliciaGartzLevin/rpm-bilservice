@@ -80,7 +80,6 @@ export const Services: React.FC = () => {
 					<li>Diagnos & felsökning med modern diagnosutrustning</li>
 					<li>Batteribyte och laddsystemkontroll</li>
 					<li>Byte av hjullager och drivknutar</li>
-					<li>Byte av vindruta och lagning av stenskott</li>
 					<li>Belysning och reparation av elsystem</li>
 					<li>Styrsystem (servopump, styrleder, styrstag)</li>
 					<li>Bränslesystem & insprutningskomponenter</li>

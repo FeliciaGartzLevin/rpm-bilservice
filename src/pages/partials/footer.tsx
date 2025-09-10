@@ -37,16 +37,20 @@ export const Footer: React.FC<Props> = ({ className }) => {
 
 				<section className="flex flex-col gap-1">
 					<Heading tag="h3">Adress</Heading>
-					<p>Tärnögatan 5</p>
+					<p>Tärnögatan 7</p>
 					<p>211 24 Malmö</p>
 					<p>
 						<a
 							rel="noopener"
-							href="https://maps.app.goo.gl/XCwngrTKTvdWMLGQA"
+							href="https://maps.app.goo.gl/gwR8cpgDND2KLJYc9"
 							target="_blank"
 						>
 							Hitta hit (google maps)
 						</a>
+					</p>
+					<p className="max-w-40">
+						- åk in till verkstaden längst in på baksidan av
+						byggnaden
 					</p>
 				</section>
 			</section>

@@ -37,7 +37,9 @@ export const Hero: React.FC<Props> = ({ imageSrc, imageAlt }) => {
 					RPM Bilsevice
 				</Heading>
 
-				<p className="text-lg md:text-xl">- din bilmekaniker i Malmö</p>
+				<p className="text-lg md:text-xl">
+					- vi tar hand om hela din bil
+				</p>
 
 				<Button
 					purpose="accent"
