@@ -1,13 +1,7 @@
-import React, { ReactNode, createContext } from 'react';
+import React, { ReactNode } from 'react';
 import { ThemeType } from '../types/theme';
 import { useLocalStorage } from '../hooks/use-local-storage';
-
-type ThemeContextType = {
-	theme: ThemeType;
-	changeTheme: (change: ThemeType) => void;
-};
-
-export const ThemeContext = createContext<ThemeContextType | null>(null);
+import { ThemeContext } from './theme-context';
 
 type Props = {
 	children: ReactNode;
